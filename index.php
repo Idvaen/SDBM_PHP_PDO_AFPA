@@ -51,9 +51,8 @@ try {
 
 
 
-    // ContinentMGR::getListContinents();
     echo "<h1>Liste de contenents CLASS</h1>";
-
+    //Contenents
     foreach (ContinentMGR::getListContinents() as $index => $continent) {
         echo $continent->__toString() . RC;
     }
@@ -62,22 +61,29 @@ try {
 
 
     echo "<h1>Liste de types de biere CLASS</h1>";
+    //Type of bieres
     foreach (Type_biereMGR::getListTypeBiere() as $index => $type) {
         echo $type->__toString() . RC;
     }
     echo RC;
     echo RC . "Combien Types: " . Type_biere::$counter . RC;
 
-    // Type_biereMGR::getListTypeBiere();
 
     echo "<h1>Liste de couleurs CLASS</h1>";
+    //Couleurs
     foreach (CouleurMGR::getListCouleur() as $index => $couleur) {
         echo $couleur->__toString() . RC;
     }
     echo RC;
     echo RC . "Combien Couleurs: " . Couleur::$counter . RC;
 
-    // CouleurMGR::getListCouleur();
+    echo "<h1>Liste de couleurs CLASS</h1>";
+    //Marques
+    foreach (MarqueMGR::getListMarques() as $index => $marque) {
+        echo $marque->__toString() . RC;
+    }
+    echo RC;
+    echo RC . "Combien Marques: " . Marque::$counter . RC;
 
 
 } catch (Exception $e) {
