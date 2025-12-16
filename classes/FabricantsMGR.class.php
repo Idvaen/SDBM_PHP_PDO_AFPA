@@ -122,13 +122,13 @@ class FabricantsMGR
     }
 
 
-    public static function getNBMarques2(string $nom)
+    public static function getNBMarques2(string $fabricant_nom)
     {
         $db = Dao::getConnexion();
         
         $sql = "CALL prcNBMarques(?,@nbMarques)";
         $reponse = $db->prepare($sql);
-        $reponse->bindValue(1, $nom);
+        $reponse->bindValue(1, $fabricant_nom);
         $reponse->execute();
         $reponse->closeCursor();
 

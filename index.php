@@ -1,7 +1,11 @@
 <?php
 
-require_once "classes/FabricantsMGR.class.php";
-require_once "classes/Fabricant.class.php";
+// require_once "classes/FabricantsMGR.class.php";
+// require_once "classes/Fabricant.class.php";
+
+spl_autoload_register(function ($class) {
+    include_once "classes/$class.class.php";
+});
 
 const RC = "<br>\n";
 
@@ -13,9 +17,7 @@ try {
     foreach (FabricantsMGR::getListFabricants() as $index => $fabricant) {
         if ($index == 0)
             echo "<table><tbody>\n<tr><th>Id</th><th>Fabricant</th></tr>\n";
-        // var_dump($fabricant);
         echo "<tr><td style='text-align: center;'>" . $fabricant->affichage()[0] . "</td>" . "<td style='text-align: center;'>" . $fabricant->affichage()[1] . "</td></tr>\n";
-        // echo RC;
     }
     echo "</tbody></table>";
     echo RC . "Combien Fabricant: " . Fabricant::$counter . RC;
