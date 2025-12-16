@@ -46,8 +46,38 @@ try {
     //     echo RC;
     // }
 
-    echo "Nombre de marques(fctNBMarques) en Fabricant AB InBev = " . FabricantsMGR::getNBMarques1("AB InBev") . RC;
-    echo "Nombre de marques(prcNBMarques) en Fabricant Diageo = " . FabricantsMGR::getNBMarques2("Diageo") . RC;
+    // echo "Nombre de marques(fctNBMarques) en Fabricant AB InBev = " . FabricantsMGR::getNBMarques1("AB InBev") . RC;
+    // echo "Nombre de marques(prcNBMarques) en Fabricant Diageo = " . FabricantsMGR::getNBMarques2("Diageo") . RC;
+
+
+
+    // ContinentMGR::getListContinents();
+    echo "<h1>Liste de contenents CLASS</h1>";
+
+    foreach (ContinentMGR::getListContinents() as $index => $continent) {
+        echo $continent->__toString() . RC;
+    }
+    echo RC;
+    echo RC . "Combien Contenents: " . Continent::$counter . RC;
+
+
+    echo "<h1>Liste de types de biere CLASS</h1>";
+    foreach (Type_biereMGR::getListTypeBiere() as $index => $type) {
+        echo $type->__toString() . RC;
+    }
+    echo RC;
+    echo RC . "Combien Types: " . Type_biere::$counter . RC;
+
+    // Type_biereMGR::getListTypeBiere();
+
+    echo "<h1>Liste de couleurs CLASS</h1>";
+    foreach (CouleurMGR::getListCouleur() as $index => $couleur) {
+        echo $couleur->__toString() . RC;
+    }
+    echo RC;
+    echo RC . "Combien Couleurs: " . Couleur::$counter . RC;
+
+    // CouleurMGR::getListCouleur();
 
 
 } catch (Exception $e) {

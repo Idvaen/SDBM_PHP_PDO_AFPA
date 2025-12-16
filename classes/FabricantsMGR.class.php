@@ -5,10 +5,6 @@ require_once "Fabricant.class.php";
 
 class FabricantsMGR
 {
-
-    private $idList = array();
-
-
     public static function getListFabricants()
     {
         $sql = "select * from fabricant";

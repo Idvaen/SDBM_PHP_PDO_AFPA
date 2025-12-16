@@ -12,6 +12,13 @@ class Continent
         self::$counter++;
     }
 
+
+        public function __toString(): string
+    {
+        return " ID: " . self::getIdContinent() . " Continent: " . self::getNomContinent() . ".";
+    }
+
+
     /**
      * Get the value of id_continent
      */

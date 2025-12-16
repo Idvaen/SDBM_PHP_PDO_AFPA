@@ -13,6 +13,11 @@ class Couleur
         self::$counter++;
     }
 
+        public function __toString(): string
+    {
+        return " ID: " . self::getIdCouleur() . " Couleur: " . self::getNomCouleur() . ".";
+    }
+
 
     /**
      * Get the value of id_couleur

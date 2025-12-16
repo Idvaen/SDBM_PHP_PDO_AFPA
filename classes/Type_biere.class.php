@@ -13,6 +13,10 @@ class Type_biere
         self::$counter++;
     }
 
+    public function __toString(): string
+    {
+        return " ID: " . self::getIdTypeBiere() . " Type de biere: " . self::getNomTypeBiere() . ".";
+    }
 
 
     /**
