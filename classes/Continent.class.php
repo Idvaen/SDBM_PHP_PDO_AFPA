@@ -15,7 +15,7 @@ class Continent
 
         public function __toString(): string
     {
-        return " ID: " . self::getIdContinent() . " Continent: " . self::getNomContinent() . ".";
+        return " ID: " . $this->getIdContinent() . " Continent: " . $this->getNomContinent() . ".";
     }
 
 

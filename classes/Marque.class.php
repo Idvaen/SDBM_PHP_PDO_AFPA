@@ -8,7 +8,7 @@ class Marque
     private $id_pays;
     public static $counter = 0;
 
-    public function __construct($id_marque, $nom_marque, $id_fabricant = null, $id_pays)
+    public function __construct($id_marque, $nom_marque, $id_fabricant, $id_pays)
     {
         $this->setIdMarque($id_marque);
         $this->setNomMarque($nom_marque);
@@ -19,7 +19,7 @@ class Marque
 
     public function __toString(): string
     {
-        return " ID: " . self::getIdMarque() . " Marque: " . self::getNomMarque() . " id_fabricant: " . self::getIdFabricant() . " id_pays: " . self::getIdPays() . ".";
+        return " ID: " . $this->getIdMarque() . " Marque: " . $this->getNomMarque() . " id_fabricant: " . $this->getIdFabricant() . " id_pays: " . $this->getIdPays() . ".";
     }
 
     /**

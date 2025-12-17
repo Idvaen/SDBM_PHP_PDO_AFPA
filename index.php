@@ -51,19 +51,36 @@ try {
 
 
 
-    echo "<h1>Liste de contenents CLASS</h1>";
+    echo "<h1>Liste de continents CLASS</h1>";
     //Contenents
     foreach (ContinentMGR::getListContinents() as $index => $continent) {
-        echo $continent->__toString() . RC;
+        echo $continent . RC;
     }
     echo RC;
-    echo RC . "Combien Contenents: " . Continent::$counter . RC;
+    echo RC . "Combien Continents: " . Continent::$counter . RC;
+
+
+    //     echo "<h1>Liste de Pays CLASS</h1>";
+    // //Marques avec nom de fabricants et pays
+    // foreach (PaysMGR::getListPays() as $index => $pays) {
+    //     echo $pays . RC;
+    // }
+    // echo RC;
+    // echo RC . "Combien Pays: " . Marque::$counter . RC;
+
+            echo "<h1>Liste de Pays CLASS</h1>";
+    //Marques avec nom de fabricants et pays
+    foreach (PaysView::getPropreListPays() as $index => $pays) {
+        echo $pays . RC;
+    }
+    echo RC;
+    echo RC . "Combien Pays: " . PaysView::$counter . RC;
 
 
     echo "<h1>Liste de types de biere CLASS</h1>";
     //Type of bieres
     foreach (Type_biereMGR::getListTypeBiere() as $index => $type) {
-        echo $type->__toString() . RC;
+        echo $type . RC;
     }
     echo RC;
     echo RC . "Combien Types: " . Type_biere::$counter . RC;
@@ -72,19 +89,27 @@ try {
     echo "<h1>Liste de couleurs CLASS</h1>";
     //Couleurs
     foreach (CouleurMGR::getListCouleur() as $index => $couleur) {
-        echo $couleur->__toString() . RC;
+        echo $couleur . RC;
     }
     echo RC;
     echo RC . "Combien Couleurs: " . Couleur::$counter . RC;
 
-    echo "<h1>Liste de couleurs CLASS</h1>";
-    //Marques
-    foreach (MarqueMGR::getListMarques() as $index => $marque) {
-        echo $marque->__toString() . RC;
+    // echo "<h1>Liste de Marques CLASS</h1>";
+    // //Marques
+    // foreach (MarqueMGR::getListMarques() as $index => $marque) {
+    //     echo $marque->__toString() . RC;
+    // }
+    // echo RC;
+    // echo RC . "Combien Marques: " . Marque::$counter . RC;
+
+
+    echo "<h1>Liste de Marques(nom_fabricant et nom_pays) CLASS</h1>";
+    //Marques avec nom de fabricants et pays
+    foreach (MarqueView::getPropreListDeMarques() as $index => $marque) {
+        echo $marque . RC;
     }
     echo RC;
-    echo RC . "Combien Marques: " . Marque::$counter . RC;
-
+    echo RC . "Combien Marques: " . MarqueView::$counter . RC;
 
 } catch (Exception $e) {
     echo "" . $e->getMessage() . "";

@@ -15,7 +15,7 @@ class Type_biere
 
     public function __toString(): string
     {
-        return " ID: " . self::getIdTypeBiere() . " Type de biere: " . self::getNomTypeBiere() . ".";
+        return " ID: " . $this->getIdTypeBiere() . " Type de biere: " . $this->getNomTypeBiere() . ".";
     }
 
 

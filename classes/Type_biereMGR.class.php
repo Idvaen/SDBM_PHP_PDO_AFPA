@@ -1,7 +1,8 @@
 <?php
 
-require_once "Dao.class.php";
-require_once "Type_biere.class.php";
+spl_autoload_register(function ($class) {
+    include_once "classes/$class.class.php";
+});
 
 class Type_biereMGR
 {

@@ -15,7 +15,7 @@ class Couleur
 
         public function __toString(): string
     {
-        return " ID: " . self::getIdCouleur() . " Couleur: " . self::getNomCouleur() . ".";
+        return " ID: " . $this->getIdCouleur() . " Couleur: " . $this->getNomCouleur() . ".";
     }
 
 

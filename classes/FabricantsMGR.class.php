@@ -1,7 +1,8 @@
 <?php
 
-require_once "Dao.class.php";
-require_once "Fabricant.class.php";
+spl_autoload_register(function ($class) {
+    include_once "classes/$class.class.php";
+});
 
 class FabricantsMGR
 {
